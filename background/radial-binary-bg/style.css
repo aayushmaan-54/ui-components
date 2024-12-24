@@ -1,0 +1,30 @@
+@keyframes coding {
+  0%, 33% {
+    background-image: url(/binary-image/binary-1.png);
+  }
+  66%, 100% {
+    background-image: url(/binary-image/binary-2.png);
+  }
+}
+
+.radial-bg {
+  background-size: 101px 144px;
+  background-position: 0 0;
+  animation: coding 0.8s linear infinite alternate;
+  -webkit-mask: radial-gradient(circle at 50% 0%, black 100px, transparent 200px);
+  mask: radial-gradient(circle at 50% 0%, black 100px, transparent 200px);
+}
+
+.bg-container {
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--brand-primary);
+  z-index: -10;
+}
+
+.bg-inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
